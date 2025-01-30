@@ -1,0 +1,249 @@
+.wishlist-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wishlist-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wishlist-header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.wishlist-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-cover {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* 2:3 aspect ratio */
+  overflow: hidden;
+}
+
+.book-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wishlist-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.quick-view-btn,
+.borrow-btn,
+.remove-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-view-btn {
+  background: white;
+  color: #1e40af;
+}
+
+.quick-view-btn:hover {
+  background: #f3f4f6;
+}
+
+.borrow-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.borrow-btn:hover {
+  background: #1d4ed8;
+}
+
+.remove-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.remove-btn:hover {
+  background: #b91c1c;
+}
+
+.book-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.author {
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  color: #f59e0b;
+}
+
+.genre {
+  background: #e5e7eb;
+  color: #4b5563;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.availability-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.availability-badge[data-available="true"] {
+  background: #059669;
+  color: white;
+}
+
+.availability-badge[data-available="false"] {
+  background: #dc2626;
+  color: white;
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.empty-wishlist h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.empty-wishlist p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.browse-books-btn {
+  padding: 0.75rem 2rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.browse-books-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wishlist-container {
+    padding: 1rem;
+  }
+
+  .wishlist-header h1 {
+    font-size: 2rem;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .book-info h3 {
+    font-size: 1.1rem;
+  }
+}

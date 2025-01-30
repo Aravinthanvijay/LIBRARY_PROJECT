@@ -1,0 +1,159 @@
+.auth-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.dark-mode .auth-container {
+  background-color: #1a1a1a;
+}
+
+.auth-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.dark-mode .auth-card {
+  background: #2d2d2d;
+}
+
+.auth-card h2 {
+  color: #1e40af;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.dark-mode .auth-card h2 {
+  color: #60a5fa;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.dark-mode .form-group label {
+  color: #9ca3af;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .form-group input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.dark-mode .form-group input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.auth-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.auth-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.dark-mode .error-message {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+
+.auth-switch {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.dark-mode .auth-switch {
+  color: #9ca3af;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .text-button {
+  color: #60a5fa;
+}
+
+.text-button:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+}

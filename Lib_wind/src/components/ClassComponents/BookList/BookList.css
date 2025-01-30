@@ -1,0 +1,190 @@
+.book-list {
+  padding: 2rem;
+}
+
+.book-list-header {
+  margin-bottom: 2rem;
+}
+
+.book-list-header h2 {
+  color: #1e40af;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.category-filter select {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  min-width: 200px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  position: relative;
+  height: 200px;
+  background: #f3f4f6;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.available {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.borrowed {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.book-info {
+  padding: 1.5rem;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.book-info .author {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-info .category {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-info .isbn {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.borrow-btn,
+.return-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.borrow-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.borrow-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.return-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.return-btn:hover {
+  background-color: #dc2626;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.no-results p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-list {
+    padding: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .category-filter select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,238 @@
+.borrowed-books-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.borrowed-books-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.borrowed-books-header h1 {
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.dark-mode .borrowed-books-header h1 {
+  color: #60a5fa;
+}
+
+.borrowed-books-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.dark-mode .borrowed-books-header p {
+  color: #9ca3af;
+}
+
+.borrowed-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.borrowed-book-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .borrowed-book-card {
+  background: #2d2d2d;
+}
+
+.borrowed-book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-cover {
+  position: relative;
+  width: 150px;
+  min-width: 150px;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.due-date-badge {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0 999px 999px 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.due-date-badge.urgent {
+  background: #dc2626;
+}
+
+.book-info {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.dark-mode .book-info h3 {
+  color: #60a5fa;
+}
+
+.author {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.dark-mode .author {
+  color: #9ca3af;
+}
+
+.dates {
+  margin-bottom: 1.5rem;
+}
+
+.date-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.date-info .label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dark-mode .date-info .label {
+  color: #9ca3af;
+}
+
+.date-info .value {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.dark-mode .date-info .value {
+  color: #60a5fa;
+}
+
+.return-btn,
+.renew-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.return-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.return-btn:hover {
+  background: #1d4ed8;
+}
+
+.renew-btn {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.dark-mode .renew-btn {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.renew-btn:hover {
+  background: #d1d5db;
+}
+
+.dark-mode .renew-btn:hover {
+  background: #4b5563;
+}
+
+.no-books-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .no-books-message {
+  background: #2d2d2d;
+}
+
+.no-books-message h2 {
+  font-size: 1.5rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.dark-mode .no-books-message h2 {
+  color: #60a5fa;
+}
+
+.no-books-message p {
+  color: #6b7280;
+}
+
+.dark-mode .no-books-message p {
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .borrowed-books-container {
+    padding: 1rem;
+  }
+
+  .borrowed-books-header h1 {
+    font-size: 2rem;
+  }
+
+  .borrowed-book-card {
+    flex-direction: column;
+  }
+
+  .book-cover {
+    width: 100%;
+    height: 200px;
+  }
+
+  .due-date-badge {
+    border-radius: 999px;
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .borrowed-books-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .book-info h3 {
+    font-size: 1.1rem;
+  }
+}
